@@ -26,6 +26,6 @@ Official Git repository of  Team P for the Metricstics project as part of the pr
 
 ---
 
-### laTex Documentation
+### LaTex Documentation
 
 - Task Holder: Anant Bir Singh
