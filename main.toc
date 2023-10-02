@@ -1,0 +1,13 @@
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Scope}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Description}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}PROBLEM 1: Goal-Question-Metric (GQM)}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Goal}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Questions and Metrics}{3}{subsection.2.2}%
+\contentsline {section}{\numberline {3}PROBLEM 2: Use Case Model}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}UML Use case Diagram}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Actor and Use Case Descriptions}{5}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Version Control}{12}{section.4}%
+\contentsline {section}{\numberline {5}References}{12}{section.5}%
