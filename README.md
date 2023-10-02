@@ -1,5 +1,5 @@
 # SOEN-6611-METRICSTICS
-Official Git repository of our Team for the Metricstics project as part of the project component for the subject "Software Measurement" under the guidance of Professor Pankaj Kamthan
+Official Git repository of  Team P for the Metricstics project as part of the project component for the subject "Software Measurement" under the guidance of Professor Pankaj Kamthan
 
 ## Team Members
 
