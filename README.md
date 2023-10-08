@@ -14,18 +14,18 @@ Official Git repository of  Team P for the Metricstics project as part of the pr
 
 ## Deliverable 1a
 
-### PROBLEM 1: Goal-Question-Metric (GQM)
-
-- Task Holder: Amrinderpreet Singh, Rahul Singh & Gaganpreet Singh
-
 ---
+| Name                | Goal-Question-Metric (GQM) | Use Cases Model  |
+|-------------------- |--------------------------  |------------------|
+| Amrinderpreet Singh | 1, 2                       | 1, 2             |
+| Anant Bir Singh     | 3, 4                       | 3, 4             |
+| Gaganpreet Singh    | 5, 6                       | 5, 6             |
+| Prabhjot Singh      | 7, 8                       | 7, 8             |
+| Rahul Singh         | 9, 10                      | 9, 10            |
+| Piyush Singla       | 11, 12                     | 11, 12           |
 
-### PROBLEM 2: Use Case Model
 
-- Task Holder: Anant Bir Singh, Piyush Singla & Prabhjot Singh
-
----
 
 ### LaTex Documentation
 
-- Task Holder: Anant Bir Singh
+- Task Holder: Amrinderpreet Singh, Anant Bir Singh, Gaganpreet Singh, Prabhjot Singh, Rahul Singh, Piyush Singla
