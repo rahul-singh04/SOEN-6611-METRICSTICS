@@ -1,13 +1,13 @@
 import os
 
 from Code import helper
-from Code.helper import Helper
+from helper import Helper
 
 
 class DataProcessor:
 
     def __init__(self):
-        self.sorted_data = None
+        self.sorted_data = None     
         self.mode = None
         self.median = None
         self.mean = None
