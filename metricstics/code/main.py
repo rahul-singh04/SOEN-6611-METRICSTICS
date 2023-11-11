@@ -15,6 +15,7 @@ def open_file_dialog():
     if file_path:
         path_textbox.delete(0, END)
         path_textbox.insert(0, file_path)
+        populate_random_data(data_processor.read_data(path_textbox.get()))
 
 def calculate_metrics():
     data_processor.read_data(path_textbox.get())
@@ -27,11 +28,14 @@ def calculate_metrics():
     mad_value.set(data_processor.get_mean_absolute_deviation())
 
 def on_radio_button_click(value):
+    for var in label_vars:
+        var.set("")
     if value == 2:
-        data_processor.generate_random_data()
         path_textbox.delete(0, END)
         path_textbox.config(state="disabled")
         open_button.config(state="disabled")
+
+        populate_random_data(data_processor.generate_random_data())
     else:
         #data_processor.read_data(r"C:\Users\anant\OneDrive\Documents\MEngg\SOEN 6431 SCM\SOEN-6611-METRICSTICS\Code\list.txt")
         path_textbox.config(state="normal")
@@ -72,28 +76,10 @@ for i, label_text in enumerate(labels):
 
 root.columnconfigure(1, weight=1)
 
-"""Label_filepath =  Label(root, text = "Enter file path", anchor="e", justify="right")"""
-
-# Labels positioning
-# Label_title_mean.grid(row=5, column= 0, sticky="e")
-# Label_mean.grid(row=5, column= 1)
-# Label_title_median.grid(row=6, column= 0, sticky="e")
-# Label_median.grid(row=6, column= 1)
-# Label_title_mode.grid(row=7, column= 0, sticky="e")
-# Label_mode.grid(row=7, column= 1)
-# Label_title_min.grid(row=8, column= 0, sticky="e")
-# Label_min.grid(row=8, column= 1)
-# Label_title_max.grid(row=9, column= 0, sticky="e")
-# Label_max.grid(row=9, column= 1)
-# Label_title_std.grid(row=10, column= 0, sticky="e")
-# Label_std.grid(row=10, column= 1)
-# Label_title_mad.grid(row=11, column= 0, sticky="e")
-# Label_mad.grid(row=11, column= 1)
 
 
 
 
-"""Label_filepath.grid(row=2, column=0, sticky="e")"""
 
 
 #define functions
@@ -126,6 +112,12 @@ style = ttk.Style()
 style.configure('TButton', padding=5, relief="flat", font=('Arial', 10))
 style.configure('TLabel', font=('Arial', 10))
 
+style.map("Treeview", background=[('selected', '#007acc')])
+style.configure("Treeview", foreground="#000000")
+style.configure("Treeview.Heading", background="#d3d3d3", foreground="#000000")
+
+
+
 
 button_calculate = ttk.Button(root, text="Calculate Metrics", command=calculate_metrics, style="TButton")
 button_calculate.grid(row=4, column=0, padx=20, pady=20)
@@ -153,6 +145,41 @@ mad_btn.grid(row=3, column=5, pady=20, padx=20)
 
 standard_dev_btn = ttk.Button(root, text="Calculate Standard Deviation", command=getStandardDev, style="TButton")
 standard_dev_btn.grid(row=3, column=6, pady=20, padx=20)
+
+
+
+# Define Treeview for displaying random data
+columns = ("S.No", "Value")
+treeview = ttk.Treeview(root, columns=columns, show="headings")
+
+# Set column headings
+for col in columns:
+    treeview.heading(col, text=col)
+
+# Set column widths
+treeview.column("S.No", width=50, anchor="center")
+treeview.column("Value", width=150, anchor="center")
+
+# Create a scrollbar for the treeview
+vsb = ttk.Scrollbar(root, orient="vertical", command=treeview.yview)
+treeview.configure(yscrollcommand=vsb.set)
+
+# Grid layout for treeview and scrollbar
+treeview.grid(row=5, column=0, columnspan=2, pady=10, padx=10, sticky="nsew")
+vsb.grid(row=5, column=2, pady=10, sticky="ns")
+
+# Make the treeview expand with the window
+root.grid_rowconfigure(5, weight=1)
+root.grid_columnconfigure(1, weight=1)
+
+# Function to populate random data in the treeview
+def populate_random_data(value):
+    for item in treeview.get_children():
+        treeview.delete(item)
+    # Insert new data into the treeview
+    for i,value in enumerate(value):
+        treeview.insert("", "end", values=(i+1, value))
+
 
 
 root.mainloop()
