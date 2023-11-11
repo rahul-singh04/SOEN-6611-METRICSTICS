@@ -29,12 +29,15 @@ class DataProcessor:
         elif file_extension == ".csv":
             self.original_data = self.helper.read_csv_file(file_path)
 
+        return self.original_data
+
     def generate_random_data(self):
         """
         This method generates random data ranging from 1 to 1000
         :return:
         """
         self.original_data = self.helper.generate_random_data()
+        return self.original_data
 
     def get_mean(self):
         """
