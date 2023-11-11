@@ -70,9 +70,9 @@ label_vars = [mean_value, median_value, mode_value, min_value, max_value, std_va
 
 for i, label_text in enumerate(labels):
     label = ttk.Label(root, text=label_text)
-    label.grid(row=i + 5, column=0, sticky="e", pady=5, padx=10)
+    label.grid(row=i + 6, column=0, sticky="e", pady=5, padx=10)
     label_var = ttk.Label(root, textvariable=label_vars[i])
-    label_var.grid(row=i + 5, column=1, sticky="w", pady=5, padx=10)
+    label_var.grid(row=i + 6, column=1, sticky="w", pady=5, padx=10)
 
 root.columnconfigure(1, weight=1)
 
