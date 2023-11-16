@@ -1,5 +1,5 @@
 import unittest
-from code.metricstics.helper import Helper
+from metricstics.code.helper import Helper
 
 
 class TestHelper(unittest.TestCase):
