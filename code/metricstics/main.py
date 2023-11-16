@@ -1,7 +1,7 @@
-from data_processor import DataProcessor
+from code.metricstics.data_processor import DataProcessor
 
 data_processor = DataProcessor()
-data_processor.read_data("list.txt")
+data_processor.read_data("input_files/list.txt")
 
 # data_processor.generate_random_data()
 mean_value = data_processor.get_mean()
