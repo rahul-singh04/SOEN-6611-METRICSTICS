@@ -1,5 +1,5 @@
 import unittest
-from code.metricstics.data_processor import DataProcessor
+from metricstics.code.data_processor import DataProcessor
 
 
 class TestDataProcessor(unittest.TestCase):

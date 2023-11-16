@@ -1,4 +1,4 @@
-from code.metricstics.data_processor import DataProcessor
+from metricstics.code.data_processor import DataProcessor
 
 data_processor = DataProcessor()
 data_processor.read_data("input_files/list.txt")

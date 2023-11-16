@@ -1,6 +1,6 @@
 import os
 
-from code.metricstics.helper import Helper
+from metricstics.code.helper import Helper
 
 
 class DataProcessor:
