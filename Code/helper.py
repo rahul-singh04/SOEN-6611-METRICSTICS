@@ -58,8 +58,7 @@ class Helper:
         # Calculate and return the mean
         return round(sum_of_numbers / count, 2)
 
-
-    def calculate_variance(self,data, mean):
+    def calculate_variance(self, data, mean):
         """
         Calculate the variance of a list of numbers.
         :param data: List of numbers
@@ -74,23 +73,39 @@ class Helper:
         variance = sum_squared_diff / len(data)
         return variance
 
+    def merge_sort(self, arr):
+        if len(arr) > 1:
+            mid = len(arr) // 2  # Find the middle of the array
+            left_half = arr[:mid]  # Divide the array into two halves
+            right_half = arr[mid:]
 
-    def bubble_sort(self,data):
-        """
-        Sort a list of numbers in ascending order using the bubble sort algorithm.
-        :param data: List of numbers
-        :return:
-        """
-        length = len(data)
+            self.merge_sort(left_half)  # Recursive call on the left half
+            self.merge_sort(right_half)  # Recursive call on the right half
 
-        for i in range(length):
-            for j in range(0, length - i - 1):
-                if data[j] > data[j + 1]:
-                    # Swap elements if they are in the wrong order
-                    data[j], data[j + 1] = data[j + 1], data[j]
+            i = j = k = 0
 
+            # Merge the two halves
+            while i < len(left_half) and j < len(right_half):
+                if left_half[i] < right_half[j]:
+                    arr[k] = left_half[i]
+                    i += 1
+                else:
+                    arr[k] = right_half[j]
+                    j += 1
+                k += 1
 
-    def calculate_mean_absolute_deviation(self,data, mean):
+            # Check for any remaining elements
+            while i < len(left_half):
+                arr[k] = left_half[i]
+                i += 1
+                k += 1
+
+            while j < len(right_half):
+                arr[k] = right_half[j]
+                j += 1
+                k += 1
+
+    def calculate_mean_absolute_deviation(self, data, mean):
         """
         Calculate the mean absolute deviation (MAD) of a list of numbers from their mean.
 
@@ -111,7 +126,6 @@ class Helper:
 
         mean_absolute_deviation = absolute_diff_sum / count
         return mean_absolute_deviation
-
 
     def generate_random_data(self):
         """

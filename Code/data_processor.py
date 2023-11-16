@@ -56,9 +56,8 @@ class DataProcessor:
 
         if self.sorted_data is None:
             # Create a copy to avoid modifying the original data.
-            sorted_data = self.original_data.copy()
-            self.helper.bubble_sort(sorted_data)
-            self.sorted_data = sorted_data
+            self.sorted_data = self.original_data.copy()
+            self.helper.merge_sort(self.sorted_data)
 
         length = len(self.sorted_data)
 
@@ -101,7 +100,7 @@ class DataProcessor:
 
         if self.sorted_data is None:
             sorted_data = self.original_data.copy()
-            self.sorted_data = self.helper.bubble_sort(sorted_data)
+            self.helper.merge_sort(sorted_data)
 
         # Return the minimum value, which is the first element of the sorted data
         return self.sorted_data[0]
@@ -117,7 +116,7 @@ class DataProcessor:
 
         if self.sorted_data is None:
             sorted_data = self.original_data.copy()
-            self.sorted_data = self.helper.bubble_sort(sorted_data)
+            self.helper.merge_sort(sorted_data)
 
         # Return the maximum value, which is the last element of the sorted data
         return self.sorted_data[-1]
