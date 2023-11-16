@@ -1,7 +1,6 @@
 import os
 
-from Code import helper
-from Code.helper import Helper
+from code.metricstics.helper import Helper
 
 
 class DataProcessor:

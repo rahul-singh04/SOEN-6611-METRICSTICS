@@ -1,6 +1,5 @@
-import csv
 import unittest
-from data_processor import DataProcessor
+from code.metricstics.data_processor import DataProcessor
 
 
 class TestDataProcessor(unittest.TestCase):
