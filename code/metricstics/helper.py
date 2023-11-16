@@ -1,6 +1,7 @@
 import csv
 import random
 
+
 class Helper:
 
     def __init__(self):
@@ -58,8 +59,12 @@ class Helper:
                 # Return None for empty data
                 return None
 
-            sum_of_numbers = sum(data)
-            count = len(data)
+            sum_of_numbers = 0
+            count = 0
+
+            for number in data:
+                sum_of_numbers += number
+                count += 1
 
             # Calculate and return the mean
             return round(sum_of_numbers / count, 2)
@@ -69,7 +74,6 @@ class Helper:
     def calculate_variance(self, data, mean):
         """
         Calculate the variance of a list of numbers.
-
         :param data: List of numbers
         :param mean: Mean of data
         :return: Variance of the data
@@ -79,7 +83,11 @@ class Helper:
                 # Return None for empty data or undefined mean
                 return None
 
-            sum_squared_diff = sum((value - mean) ** 2 for value in data)
+            sum_squared_diff = 0
+            for value in data:
+                squared_diff = (value - mean) ** 2
+                sum_squared_diff += squared_diff
+
             variance = sum_squared_diff / len(data)
             return variance
         except Exception as e:
@@ -139,8 +147,14 @@ class Helper:
                 # Return None for empty data or undefined mean
                 return None
 
-            absolute_diff_sum = sum(abs(value - mean) for value in data)
-            mean_absolute_deviation = absolute_diff_sum / len(data)
+            absolute_diff_sum = 0
+            count = 0
+
+            for value in data:
+                absolute_diff_sum += value - mean if value >= mean else mean - value
+                count += 1
+
+            mean_absolute_deviation = absolute_diff_sum / count
             return mean_absolute_deviation
         except Exception as e:
             print(f"An error occurred while calculating the mean absolute deviation: {e}")
