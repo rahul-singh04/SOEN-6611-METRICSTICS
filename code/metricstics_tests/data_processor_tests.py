@@ -50,6 +50,18 @@ class TestDataProcessor(unittest.TestCase):
         mean_abs_dev = self.data_processor.get_mean_absolute_deviation()
         self.assertEqual(mean_abs_dev, 1.2)
 
+    def test_get_min_value(self):
+        # Test getting the minimum value
+        self.data_processor.original_data = [5, 2, 8, 1, 3]
+        min_value = self.data_processor.get_min_value()
+        self.assertEqual(min_value, 1)
+
+    def test_get_max_value(self):
+        # Test getting the maximum value
+        self.data_processor.original_data = [5, 2, 8, 1, 3]
+        max_value = self.data_processor.get_max_value()
+        self.assertEqual(max_value, 8)
+
 
 if __name__ == '__main__':
     unittest.main()
