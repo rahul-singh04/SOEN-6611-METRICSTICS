@@ -12,7 +12,7 @@ Official Git repository of  Team P for the Metricstics project as part of the pr
 
 ---
 
-## Deliverable 1a
+## Deliverable 1
 
 ---
 | Name                | Goal-Question-Metric (GQM) | Use Cases Model  |
