@@ -1,7 +1,6 @@
 import os
 
-from Code import helper
-from Code.helper import Helper
+from helper import Helper
 
 
 class DataProcessor:
@@ -30,12 +29,15 @@ class DataProcessor:
         elif file_extension == ".csv":
             self.original_data = self.helper.read_csv_file(file_path)
 
+        return self.original_data
+
     def generate_random_data(self):
         """
         This method generates random data ranging from 1 to 1000
         :return:
         """
         self.original_data = self.helper.generate_random_data()
+        return self.original_data
 
     def get_mean(self):
         """
@@ -101,7 +103,8 @@ class DataProcessor:
 
         if self.sorted_data is None:
             sorted_data = self.original_data.copy()
-            self.sorted_data = self.helper.bubble_sort(sorted_data)
+            self.helper.bubble_sort(sorted_data)
+            self.sorted_data = sorted_data
 
         # Return the minimum value, which is the first element of the sorted data
         return self.sorted_data[0]
@@ -117,7 +120,8 @@ class DataProcessor:
 
         if self.sorted_data is None:
             sorted_data = self.original_data.copy()
-            self.sorted_data = self.helper.bubble_sort(sorted_data)
+            self.helper.bubble_sort(sorted_data)
+            self.sorted_data = sorted_data
 
         # Return the maximum value, which is the last element of the sorted data
         return self.sorted_data[-1]
@@ -146,6 +150,10 @@ class DataProcessor:
         This method calculates the mean absolute deviation
         :return: The mean absolute deviation of the data
         """
+
+        if not self.original_data:
+            # Return None for empty data
+            return None
         if self.mean is None:
             self.get_mean()
 
