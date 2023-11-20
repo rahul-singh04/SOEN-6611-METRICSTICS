@@ -15,7 +15,8 @@ def open_file_dialog():
     if file_path:
         path_textbox.delete(0, END)
         path_textbox.insert(0, file_path)
-        populate_random_data(data_processor.read_data(path_textbox.get()))
+        data_processor.read_data(path_textbox.get())
+        populate_random_data(data_processor.original_data)
 
 def calculate_metrics():
     data_processor.read_data(path_textbox.get())
@@ -34,8 +35,9 @@ def on_radio_button_click(value):
         path_textbox.delete(0, END)
         path_textbox.config(state="disabled")
         open_button.config(state="disabled")
+        data_processor.generate_random_data()
 
-        populate_random_data(data_processor.generate_random_data())
+        populate_random_data(data_processor.original_data)
     else:
         #data_processor.read_data(r"C:\Users\anant\OneDrive\Documents\MEngg\SOEN 6431 SCM\SOEN-6611-METRICSTICS\Code\list.txt")
         path_textbox.config(state="normal")
