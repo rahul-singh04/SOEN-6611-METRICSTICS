@@ -8,7 +8,7 @@ Installation notes
 --------------------------------------------------------
 
 - Clone the METRICSTICS repository from GitHub:
-git clone https://github.com/your-username/METRICSTICS.git
+git clone https://github.com/theOGCodeWitcher/SOEN-6611-METRICSTICS.git
 
 - Navigate to the project directory:
 cd METRICSTICS
