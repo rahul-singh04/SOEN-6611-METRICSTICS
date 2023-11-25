@@ -27,7 +27,7 @@ Official Git repository of  Team P for the Metricstics project as part of the pr
 ### LaTex Documentation
 
 - Task Holder: Amrinderpreet Singh, Anant Bir Singh, Gaganpreet Singh, Prabhjot Singh, Rahul Singh, Piyush Singla
-- 
+  
 ---
 
 ## Deliverable 2
