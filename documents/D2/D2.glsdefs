@@ -1,0 +1,28 @@
+\glsdefs@newdocentry{scatterplot}%
+{%
+name={Scatter Plot},%
+sort={Scatter Plot},%
+type={main},%
+first={Scatter Plot},%
+firstplural={Scatter Plots},%
+text={Scatter Plot},%
+plural={Scatter Plots},%
+description={A type of plot that displays individual data points on a two-dimensional graph. It is used to visualize the relationship between two continuous variables.},%
+descriptionplural={A type of plot that displays individual data points on a two-dimensional graph. It is used to visualize the relationship between two continuous variables.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
