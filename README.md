@@ -24,8 +24,45 @@ Official Git repository of  Team P for the Metricstics project as part of the pr
 | Rahul Singh         | 9, 10                      | 9, 10            |
 | Piyush Singla       | 11, 12                     | 11, 12           |
 
-
-
 ### LaTex Documentation
+
+- Task Holder: Amrinderpreet Singh, Anant Bir Singh, Gaganpreet Singh, Prabhjot Singh, Rahul Singh, Piyush Singla
+- 
+---
+
+## Deliverable 2
+
+---
+
+### Project Effort Estimation
+- Task Holder: Amrinderpreet Singh, Anant Bir Singh, Gaganpreet Singh, Prabhjot Singh, Rahul Singh, Piyush Singla
+
+ ### METRICSTICS Implementation
+ #### Backend
+ - Task Holder: Amrinderpreet Singh,  Gaganpreet Singh, Rahul Singh, Piyush Singla
+   #### GUI
+ - Task Holder: Anant Bir Singh, Prabhjot Singh
+
+  ### Cyclomatic Complexity
+  - Task Holder: Anant Bir Singh, Gaganpreet Singh
+
+  ### Object-oriented metrics  
+  - Task Holder: Piyush Singla, Prabhjot Singh, Amrinderpreet Singh
+
+  ### Physical And Logical SLOC
+  - Task Holder: Rahul Singh, Anant Bir Singh, Gaganpreet Singh
+
+   ### WMC vs Logical SLOC
+   - Task Holder: Piyush Singla, Prabhjot Singh, Amrinderpreet Singh
+     
+### LaTex Documentation
+
+- Task Holder: Amrinderpreet Singh, Anant Bir Singh, Gaganpreet Singh, Prabhjot Singh, Rahul Singh, Piyush Singla
+
+---
+
+## Deliverable 3
+
+---
 
 - Task Holder: Amrinderpreet Singh, Anant Bir Singh, Gaganpreet Singh, Prabhjot Singh, Rahul Singh, Piyush Singla
